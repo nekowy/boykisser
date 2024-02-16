@@ -28,8 +28,8 @@
         <div class="sidebar-header">
           <span>License</span>
         </div>
-        <a href="/boykisser" class="nav-link"> <i class="fas fa-home"></i> Home </a>
-        <a href=/boykisser/check" class="nav-link">
+        <a href="/" class="nav-link"> <i class="fas fa-home"></i> Home </a>
+        <a href="/checking" class="nav-link">
           <i class="far fa-comment"></i> Check
         </a>
       </div>
@@ -143,7 +143,7 @@
     }
     get_btn.addEventListener("click", () => {
       let req = httpGet(
-        "https://" + getDomain(window.location.href) + "/check?key=" + key.value
+        "https://boykisser-license.onrender.com/check?key=" + key.value
       );
       console.log(req);
       if (req === "Invalid Key") {
