@@ -28,8 +28,8 @@
         <div class="sidebar-header">
           <span>License</span>
         </div>
-        <a href="/boykisser" class="nav-link"> <i class="fas fa-home"></i> Home </a>
-        <a href="/boykisser/checking" class="nav-link">
+        <a href="/" class="nav-link"> <i class="fas fa-home"></i> Home </a>
+        <a href="/checking" class="nav-link">
           <i class="far fa-comment"></i> Check
         </a>
       </div>
@@ -169,9 +169,7 @@
     send_btn.addEventListener("click", () => {
       if (
         httpGet(
-          "https://" +
-            getDomain(window.location.href) +
-            "/generate?name=" +
+            "https://boykisser-license.onrender.com/generate?name=" +
             name.value +
             "&age=" +
             age.value +
@@ -195,11 +193,11 @@
     get_btn.addEventListener("click", () => {
       if (
         httpGet(
-          "https://" + getDomain(window.location.href) + "/get?key=" + key.value
+          "https://boykisser-license.onrender.com/get?key=" + key.value
         ) !== "Invalid Key"
       ) {
         window.location.href =
-          "https://" + getDomain(window.location.href) + "/get?key=" + key.value;
+          "https://boykisser-license.onrender.com/get?key=" + key.value;
       }
     });
   </script>
