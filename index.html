@@ -195,9 +195,14 @@
         httpGet(
           "https://boykisser-license.onrender.com/get?key=" + key.value
         ) !== "Invalid Key"
-      ) {
-        window.location.href =
-          "https://boykisser-license.onrender.com/get?key=" + key.value;
+      ) 
+          {
+            Swal.fire({
+  title: "<strong>License <u>generated</u></strong>",
+  icon: "info",
+  html: `<img src="https://boykisser-license.onrender.com/get?key=${key.value}">;`,
+});
+          
       }
     });
   </script>
